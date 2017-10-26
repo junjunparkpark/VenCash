@@ -1,0 +1,19 @@
+{
+  "name": "vencash",
+  "version": "1.0.0",
+  "description": "A social networking cash app to send and receive money.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/junjunparkpark/vencash.git"
+  },
+  "author": "Jun Park",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/junjunparkpark/vencash/issues"
+  },
+  "homepage": "https://github.com/junjunparkpark/vencash#readme"
+}
