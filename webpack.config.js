@@ -1,8 +1,8 @@
-import webpack from 'webpack';
-import path from 'path';
+const webpack = require('webpack');
+const path = require('path');
 
 const config = {
-  entry: './client/src/app',
+  entry: './client/src/index',
   output: {
     path: path.join(__dirname, 'public/dist'),
     filename: 'bundle.js'
@@ -30,4 +30,4 @@ const config = {
   }
 };
 
-export default config;
+module.exports = config;
