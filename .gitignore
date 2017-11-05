@@ -1,23 +1,13 @@
-# Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
-.grunt
+
 
 public/dist/bundle.js/
 *bundle.js
+bundle.js
 
 node_modules/
 bower_components/
 
-# Ignore package-lock.json AND yarn.lock
 package-lock.json
 yarn.lock
 
-# Logs
-logs
-*.log
-
-# Runtime data
-pids
-*.pid
-*.seed
-*.rdb
 
