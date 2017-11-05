@@ -1,14 +1,12 @@
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/test', { useMongoClient: true });
+mongoose.connect('mongodb://localhost/VenCash', { useMongoClient: true });
 mongoose.Promise = global.Promise;
 
-var Cat = mongoose.model('Cat', { name: String });
+var db = mongoose.connection;
 
-var kitty = new Cat({ name: 'Zildjian' });
-kitty.save(function (err) {
-  if (err) {
-    console.log(err);
-  } else {
-    console.log('meow');
-  }
+db.on('error', console.error.bind(console, 'connection error:'));
+
+db.once('open', function () {
+  console.log('Mongoose for VenCash successfully connected!');
 });
+
