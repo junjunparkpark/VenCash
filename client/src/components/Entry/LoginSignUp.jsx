@@ -12,7 +12,7 @@ class LoginSignUp extends React.Component {
         <form>
           <input name="e-mail" /> <br />
           <input name="password" type="password" /> <br />
-          <button>Sign Up</button><br />
+          <button className="btn btn-primary">Sign Up</button><br />
           <button type="submit">Login</button>
         </form>
       </div>
