@@ -10,3 +10,7 @@ db.once('open', function () {
   console.log('Mongoose for VenCash successfully connected!');
 });
 
+var User = mongoose.model('User', { username: String, password: String });
+
+
+module.exports = User;

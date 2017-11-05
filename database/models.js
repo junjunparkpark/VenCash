@@ -1,12 +1,15 @@
 var mongoose = require('mongoose');
 
-var Cat = mongoose.model('Cat', { name: String });
+var User = mongoose.model('User', { username: String, password: String });
 
-var kitty = new Cat({ name: 'Zildjian' });
-kitty.save(function (err) {
-  if (err) {
-    console.log(err);
-  } else {
-    console.log('meow');
-  }
-});
+// var jun = new User({ username: 'junjun123', password: 'password' });
+
+// jun.save(function (err) {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     console.log('meow');
+//   }
+// });
+
+module.exports = User;
