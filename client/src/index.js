@@ -19,7 +19,17 @@ class App extends React.Component {
   }
 
   signUpUser(user) {
-    console.log('SignUpUser getting invoked at App', user)
+    console.log('SignUpUser getting invoked at App', user);
+    axios.post('/api/user', {
+      email: user.email,
+      password: user.password
+    })
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
     
   }
 
