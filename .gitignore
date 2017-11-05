@@ -1,6 +1,7 @@
 # Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
 .grunt
 
+public/dist/bundle.js
 node_modules/
 bower_components/
 
@@ -17,3 +18,4 @@ pids
 *.pid
 *.seed
 *.rdb
+
