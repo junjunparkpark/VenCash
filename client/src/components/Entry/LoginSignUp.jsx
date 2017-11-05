@@ -22,12 +22,13 @@ class LoginSignUp extends React.Component {
   }
 
   handleSignUpClick(e) {
+    e.preventDefault();
     console.log('handleSignUp Clicking!!', this.state);
 
   }
 
   handleLoginSubmit(e) {
-    e.preventDefault
+    e.preventDefault();
     console.log('Login Submitting -->', this.state)
   }
 
@@ -49,7 +50,7 @@ class LoginSignUp extends React.Component {
               <button className="btn btn-primary" onClick={this.handleSignUpClick.bind(this)}>Sign Up</button>
             </div>
             <div className="col-md-3 pull-right">
-              <button className="btn btn-primary"  type="submit">Login</button>
+              <button className="btn btn-primary">Login</button>
             </div>
           </div>
         </form>
