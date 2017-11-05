@@ -9,16 +9,18 @@ class App extends React.Component {
     this.state = {
       loggedIn: false,
       currentUser: '',
-      username: '',
-      firstName: '',
-      lastName: ''
+      username: ''
     }
+  }
+
+  authenticateUser() {
+
   }
 
   render() {
     return (
       <div>
-        <Landing />
+        <Landing authenticateUser={this.authenticateUser.bind(this)} />
       </div>
 
     );

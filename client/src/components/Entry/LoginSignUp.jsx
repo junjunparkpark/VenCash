@@ -3,13 +3,17 @@ import React from 'react';
 class LoginSignUp extends React.Component {
   constructor(props) {
     super(props);
-
+    this.state = {
+      email: '',
+      password: ''
+    }
   }
 
   render() {
     return (
       <div>
-        <form>
+        <div className="col-md-3"></div>
+        <form className="center">
           <div className="form-group row col-md-6">
             <input className="form-control mb-2 mb-sm-0" name="e-mail" placeholder="E-mail"/> 
           </div> 
@@ -25,6 +29,7 @@ class LoginSignUp extends React.Component {
             </div>
           </div>
         </form>
+        <div className="col-md-3"></div>
       </div>
     );
   }

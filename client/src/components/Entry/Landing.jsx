@@ -2,12 +2,18 @@ import React from 'react';
 import LoginSignUp from './LoginSignUp.jsx';
 
 class Landing extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     return (
-      <div id="landing">
+      <div>
         <div className="container">
-          <h1>VenCash</h1>
-          <LoginSignUp />
+          <div className="center">
+            <h1>VenCash</h1>
+            <LoginSignUp authenticateUser={props.authenticateUser}/>
+          </div>
         </div>
       </div>
     );
