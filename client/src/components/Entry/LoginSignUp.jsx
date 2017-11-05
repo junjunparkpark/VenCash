@@ -10,10 +10,20 @@ class LoginSignUp extends React.Component {
     return (
       <div>
         <form>
-          <input name="e-mail" /> <br />
-          <input name="password" type="password" /> <br />
-          <button className="btn btn-primary">Sign Up</button><br />
-          <button type="submit">Login</button>
+          <div className="form-group row col-md-6">
+            <input className="form-control mb-2 mb-sm-0" name="e-mail" placeholder="E-mail"/> 
+          </div> 
+          <div className="form-group row col-md-6">
+            <input className="form-control mb-2 mb-sm-0" name="password" type="password" placeholder="Password" />  
+          </div>
+          <div className="form-group row">
+            <div className="col-md-3">
+              <button className="btn btn-primary">Sign Up</button>
+            </div>
+            <div className="col-md-3 pull-right">
+              <button className="btn btn-primary" type="submit">Login</button>
+            </div>
+          </div>
         </form>
       </div>
     );
