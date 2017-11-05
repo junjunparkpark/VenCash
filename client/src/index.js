@@ -1,12 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Landing from './components/Entry/Landing.jsx';
 
 
 class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      loggedIn: false
+    }
+  }
+
   render() {
     return (
       <div>
-        Hello World
+        <Landing />
       </div>
 
     );
