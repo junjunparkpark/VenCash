@@ -7,7 +7,11 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      loggedIn: false
+      loggedIn: false,
+      currentUser: '',
+      username: '',
+      firstName: '',
+      lastName: ''
     }
   }
 

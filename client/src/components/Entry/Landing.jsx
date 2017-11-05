@@ -5,11 +5,10 @@ class Landing extends React.Component {
   render() {
     return (
       <div id="landing">
-        Landing Page!
+        <h1>VenCash</h1>
         <LoginSignUp />
-
       </div>
-    )
+    );
   }
 }
 
