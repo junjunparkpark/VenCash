@@ -23,13 +23,13 @@ class LoginSignUp extends React.Component {
 
   handleSignUpClick(e) {
     e.preventDefault();
-    console.log('handleSignUp Clicking!!', this.state);
+    this.props.signUpUser(this.state);
 
   }
 
   handleLoginSubmit(e) {
     e.preventDefault();
-    console.log('Login Submitting -->', this.state)
+    this.props.authenticateUser(this.state);
   }
 
   

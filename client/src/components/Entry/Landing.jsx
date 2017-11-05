@@ -12,7 +12,7 @@ class Landing extends React.Component {
         <div className="container">
           <div className="center">
             <h1>VenCash</h1>
-            <LoginSignUp authenticateUser={this.props.authenticateUser}/>
+            <LoginSignUp authenticateUser={this.props.authenticateUser} signUpUser={this.props.signUpUser} />
           </div>
         </div>
       </div>
