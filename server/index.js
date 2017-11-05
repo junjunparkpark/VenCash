@@ -12,3 +12,9 @@ app.listen(PORT, () => {
 
 
 app.use(express.static(path.join(__dirname, '../public/dist')));
+
+
+app.post('/api/user', (req, res) => {
+  console.log(req.body);
+  res.end('done')
+});
