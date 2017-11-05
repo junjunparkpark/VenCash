@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Landing from './components/Entry/Landing.jsx';
-import Axios from 'axios';
+import axios from 'axios';
 
 
 class App extends React.Component {
