@@ -10,7 +10,6 @@ class App extends React.Component {
     this.state = {
       loggedIn: false,
       currentUser: '',
-      username: ''
     }
   }
 
@@ -21,8 +20,8 @@ class App extends React.Component {
   signUpUser(user) {
     console.log('SignUpUser getting invoked at App', user);
     axios.post('/api/user', {
-      email: user.email,
-      password: user.password
+      username: 'jun',
+      password: '123'
     })
       .then(function (response) {
         console.log(response);

@@ -23,19 +23,27 @@ app.use(express.static(path.join(__dirname, '../public/dist')));
 
 app.post('/api/user', (req, res) => {
   if (!req.body) { res.sendStatus(404); }
-  
+
   UserModel.findOne({ username: req.body.username, password: req.body.password }, function(err, user) {
-    if (err) { 
+    console.log('users FindOne, ', err, user);
+    if (!user) { 
       var newUser = new UserModel({ username: req.body.username, password: req.body.password });
 
       newUser.save(function(err) {
-        if (err) { console.log(err); }
+        if (err) { 
+          console.log(err); 
+          res.sendStatus(500);
+        }
         console.log('User saved!')
         res.end('User saved!')
       });
+    } else if (err) {
+      console.log(err);
+      res.sendStatus(500);
     } else {
       console.log('User already exists!')
-      res.end(302, 'User already exists!');
+      res.status(302).end('User already exists!');
     }
   })
 });
+
