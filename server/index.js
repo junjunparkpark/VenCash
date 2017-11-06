@@ -47,3 +47,18 @@ app.post('/api/user', (req, res) => {
   })
 });
 
+app.get('/api/user', (req, res) => {
+  if (req.params) { res.sendStatus(404); }
+
+  UserModel.findOne({ username: req.params.username, password: req.body.password }, function(err, user) {
+    if (!user) {
+      res.status(404).end('Username does not exist!');
+    } else if (err) {
+      console.log(err);
+      res.sendStatus(500);
+    } else {
+      res.end('Successful Login!');
+    }
+  })
+});
+
