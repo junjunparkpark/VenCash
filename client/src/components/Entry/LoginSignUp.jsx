@@ -4,31 +4,33 @@ class LoginSignUp extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: '',
+      username: '',
       password: ''
     }
   }
 
   handleEmailChange(e) {
     this.setState({
-      password: e.target.value
+      username: e.target.value
     });
   }
 
   handlePasswordChange(e) {
     this.setState({
-      email: e.target.value
+      password: e.target.value
     });
   }
 
   handleSignUpClick(e) {
     e.preventDefault();
+    console.log(this.state)
     this.props.signUpUser(this.state);
 
   }
 
   handleLoginSubmit(e) {
     e.preventDefault();
+    console.log(this.state)
     this.props.authenticateUser(this.state);
   }
 

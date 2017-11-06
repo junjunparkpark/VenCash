@@ -8,7 +8,7 @@ const UserModel = require('../database/index.js');
 const app = express();
 const PORT = process.env.port || 3000;
 
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
 const http = require('http').createServer(app);
@@ -47,17 +47,16 @@ app.post('/api/user', (req, res) => {
   })
 });
 
-app.get('/api/user', (req, res) => {
-  if (req.params) { res.sendStatus(404); }
-
-  UserModel.findOne({ username: req.params.username, password: req.body.password }, function(err, user) {
+app.get('/api/user', (req, res) => {  
+  UserModel.findOne({ username: req.query.username, password: req.query.password }, function(err, user) {
+    console.log('THIS IS THEUSER', user, !user)
     if (!user) {
       res.status(404).end('Username does not exist!');
     } else if (err) {
       console.log(err);
       res.sendStatus(500);
     } else {
-      res.end('Successful Login!');
+      res.sendStatus(200);
     }
   })
 });
