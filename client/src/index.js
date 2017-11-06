@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Landing from './components/Entry/Landing.jsx';
 import axios from 'axios';
+import Todo from './components/Todo/ToDo.jsx';
 
 
 class App extends React.Component {
@@ -35,7 +36,11 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Landing authenticateUser={this.authenticateUser.bind(this)} signUpUser={this.signUpUser.bind(this)}/>
+        { this.state.loggedIn 
+        ? <ToDo />
+        : <Landing authenticateUser={this.authenticateUser.bind(this)} signUpUser={this.signUpUser.bind(this)}/>
+
+        }
       </div>
 
     );
