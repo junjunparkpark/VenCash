@@ -10,8 +10,8 @@ class Landing extends React.Component {
     return (
       <div>
         <div className="container">
-          <div className="center">
-            <h1>ToDo List</h1>
+          <div className="center login">
+            <h1>Sign-Up / Login</h1>
             <LoginSignUp authenticateUser={this.props.authenticateUser} signUpUser={this.props.signUpUser} />
             
 

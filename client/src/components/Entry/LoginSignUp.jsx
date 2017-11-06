@@ -36,8 +36,9 @@ class LoginSignUp extends React.Component {
 
   render() {
     return (
-      <div>
+      <div id="">
         <div className="col-md-3"></div>
+        <div className="col-md-6">
         <form className="center" onSubmit={this.handleLoginSubmit.bind(this)}>
           <div className="form-group row col-md-6">
             <input className="form-control mb-2 mb-sm-0" name="e-mail" placeholder="E-mail" onChange={this.handleEmailChange.bind(this)}/> 
@@ -54,6 +55,7 @@ class LoginSignUp extends React.Component {
             </div>
           </div>
         </form>
+        </div>
         <div className="col-md-3"></div>
       </div>
     );

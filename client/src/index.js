@@ -16,18 +16,38 @@ class App extends React.Component {
 
   authenticateUser(user) {
     console.log('this is getting invoked!', user);
+    axios.get('/api/user', {
+      params: {
+        username: user.username,
+        password: user.password
+      }
+    })
+      .then((response) => {
+        console.log(response);
+        this.setState({
+          loggedIn: true,
+          currentUser: user.username
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }
 
   signUpUser(user) {
     console.log('SignUpUser getting invoked at App', user);
     axios.post('/api/user', {
-      username: 'jun',
-      password: '123'
+      username: user.username,
+      password: user.password
     })
-      .then(function (response) {
+      .then((response) => {
         console.log(response);
+        this.setState({
+          loggedIn: true,
+          currentUser: user.username
+        });
       })
-      .catch(function (error) {
+      .catch((error) => {
         console.log(error);
       });
     
