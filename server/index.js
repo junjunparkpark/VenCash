@@ -61,3 +61,15 @@ app.get('/api/user', (req, res) => {
   })
 });
 
+
+app.put('/api/user', (req, res) => {
+  console.log(req)
+  UserModel.findOneAndUpdate({ username: req.body.user }, { list: req.body.list }, (err, user) => {
+    if (err) {
+      console.log(err);
+      res.sendStatus(500);
+    }
+    res.end('Successful PUT!');
+  })
+});
+

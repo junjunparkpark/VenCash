@@ -59,7 +59,7 @@ class App extends React.Component {
     return (
       <div>
         { this.state.loggedIn 
-        ? <Todo todos={this.state.todos}/>
+        ? <Todo currentUser={this.state.currentUser} todos={this.state.todos}/>
         : <Landing authenticateUser={this.authenticateUser.bind(this)} signUpUser={this.signUpUser.bind(this)}/>
         }
       </div>
