@@ -11,6 +11,7 @@ class App extends React.Component {
     this.state = {
       loggedIn: false,
       currentUser: '',
+      todos: []
     }
   }
 
@@ -26,7 +27,8 @@ class App extends React.Component {
         console.log(response);
         this.setState({
           loggedIn: true,
-          currentUser: user.username
+          currentUser: user.username,
+          todos: response.data
         });
       })
       .catch((err) => {
@@ -57,7 +59,7 @@ class App extends React.Component {
     return (
       <div>
         { this.state.loggedIn 
-        ? <Todo />
+        ? <Todo todos={this.state.todos}/>
         : <Landing authenticateUser={this.authenticateUser.bind(this)} signUpUser={this.signUpUser.bind(this)}/>
         }
       </div>

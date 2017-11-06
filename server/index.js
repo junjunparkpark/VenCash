@@ -56,7 +56,7 @@ app.get('/api/user', (req, res) => {
       console.log(err);
       res.sendStatus(500);
     } else {
-      res.sendStatus(200);
+      res.send(JSON.stringify(user.todos));
     }
   })
 });

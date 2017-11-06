@@ -4,7 +4,7 @@ class Todo extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-
+      list: props.todos
     }
   }
 
@@ -12,7 +12,7 @@ class Todo extends React.Component {
     return (
       <div>
         <h1>Todo</h1>
-
+        
 
       </div>
     );
